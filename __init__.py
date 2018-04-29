@@ -43,6 +43,11 @@ class HelloWorldSkill(MycroftSkill):
             require("HelloWorldKeyword").build()
         self.register_intent(hello_world_intent,
                              self.handle_hello_world_intent)
+        
+        linux_intent = IntentBuilder("LinuxIntent"). \
+            require("LinuxKeyword").build()
+        self.register_intent(linux_intent, 
+                             self.handle_linux_intent)
 
     def handle_thank_you_intent(self, message):
         self.speak_dialog("welcome")
@@ -52,6 +57,9 @@ class HelloWorldSkill(MycroftSkill):
 
     def handle_hello_world_intent(self, message):
         self.speak_dialog("hello.world")
+        
+    def handle_linux_intent(selfself, message):
+        self.speak_dialog("linux")
 
     def stop(self):
         pass

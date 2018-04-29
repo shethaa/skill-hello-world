@@ -58,7 +58,7 @@ class HelloWorldSkill(MycroftSkill):
     def handle_hello_world_intent(self, message):
         self.speak_dialog("hello.world")
         
-    def handle_linux_intent(selfself, message):
+    def handle_linux_intent(self, message):
         self.speak_dialog("linux")
 
     def stop(self):
